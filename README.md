@@ -41,7 +41,50 @@ https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth
 copy the file to your stable-diffusion-cpuponly-main directory
 
 
-create manual conda enviroment and activate ! (optional, but strongly recommended)
+sudo mkdir /opt/StableDiffusion
+sudo chmod 777 /opt/StableDiffusion
+cd /opt/StableDiffusion
+
+install conda (optional but highly recommended)
+Don't put it on both bash and zsh, just do one installation!!!
+
+install conda under zsh (optional)
+sudo apt install zsh
+copy the default zshrc file (optional)
+cp ./stable-diffusion-cpuonly/.zshrc /home/USERNAME
+zsh
+
+(if you haven't copied the zshrc, create the appropriate one with the menu that appears. If you copied it, the menu will not appear)
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod 777 Miniconda3-latest-Linux-x86_64.sh
+
+The installation location is e.g.: /opt/StableDiffusion/Miniconda3
+
+Don't run conda init! (just hit enter)
+
+./Miniconda3/bin/conda init zsh
+
+exit
+#Back to zsh again
+zsh
+#A prefix (base) had to appear before the prompt!
+conda env create -f ./stable-diffusion-cpuonly/environment-cpuonly.yaml
+conda activate sdco
+#A prefix (sdco) had to appear before the prompt!
+
+install conda under bash (original solution)
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod 777 Miniconda3-latest-Linux-x86_64.sh
+
+The installation location is e.g.: /opt/StableDiffusion/Miniconda3
+Run conda init (yes)
+Exit and return to the terminal
+A prefix (base) had to appear before the prompt!
+
+conda env create -f ./stable-diffusion-cpuonly/environment-cpuonly.yaml
+conda activate sdco
+A prefix (sdco) had to appear before the prompt!
 
 
 ### Linux - Running the install script
