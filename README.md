@@ -97,9 +97,8 @@ https://huggingface.co/CompVis/stable-diffusion-v-1-4-original
 
 
 ```
-cd stable-diffusion-cpuonly
 wget https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt
-mv sd-v1-4.ckpt models/ldm/stable-diffusion-v1/model.ckpt 
+mv sd-v1-4.ckpt ./stable-diffusion-cpuonly/models/ldm/stable-diffusion-v1/model.ckpt 
 ```
 
 ### Download the GFPGAN model
@@ -109,7 +108,7 @@ https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth
 
 ```
 wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth
-mv GFPGANv1.3.pth src/gfpgan/experiments/pretrained_models/GFPGANv1.3.pth
+mv GFPGANv1.3.pth ./stable-diffusion-cpuonly/src/gfpgan/experiments/pretrained_models/GFPGANv1.3.pth
 ```
 
 ### Linux - Running the install script
