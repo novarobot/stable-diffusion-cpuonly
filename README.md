@@ -40,18 +40,25 @@ https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth
 
 copy the file to your stable-diffusion-cpuponly-main directory
 
+### Create a working folder
 
 sudo mkdir /opt/StableDiffusion
+
 sudo chmod 777 /opt/StableDiffusion
+
 cd /opt/StableDiffusion
 
 install conda (optional but highly recommended)
 Don't put it on both bash and zsh, just do one installation!!!
 
 install conda under zsh (optional)
+
 sudo apt install zsh
+
 copy the default zshrc file (optional)
+
 cp ./stable-diffusion-cpuonly/.zshrc /home/USERNAME
+
 zsh
 
 (if you haven't copied the zshrc, create the appropriate one with the menu that appears. If you copied it, the menu will not appear)
