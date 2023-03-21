@@ -23,6 +23,7 @@ pip install -e git+https://github.com/xinntao/Real-ESRGAN#egg=realesrgan
 pip install chardet
 pip install --force-reinstall charset-normalizer==3.1.0
 pip install git+https://github.com/crowsonkb/k-diffusion/
+pip install pytorch-lightning
 
 #cp sd-v1-4.ckpt models/ldm/stable-diffusion-v1/model.ckpt
 #rm sd-v1-4.ckpt
