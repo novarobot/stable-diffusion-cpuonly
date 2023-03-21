@@ -1,3 +1,3 @@
 #!/bin/bash
-conda activate sdco
+#conda activate sdco
 python ./webui.py --no-half
