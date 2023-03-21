@@ -12,19 +12,9 @@ This fork of Stable-Diffusion doesn't require a high end graphics card and runs 
 
 Miniconda : https://docs.conda.io/en/latest/miniconda.html
 
+git : we just use it to download repos from GitHub
 
-##### Install Git
-https://git-scm.com/downloads
-version control manager for code 
-we just use it to download repos from GitHub
-Must be on system PATH, When installing select the option add to system PATH
-
-##### Install Wget
-used to download models for projects
-Windows users need this verison
-https://eternallybored.org/misc/wget/
-download the .exe and I copied it to my C:/Windows/System directory (this isn't the correct way just the fastest to get it working)
-
+wget : used to download models for projects
 
 Install git and wget with the following command
 ```
