@@ -120,7 +120,16 @@ cd stable-diffusion-cpuonly/
 
 Run the following command
 
-./run_sdco.sh
+```
+#Go to the installation directory
+cd /opt/StableDiffusion/stable-diffusion-cpuonly
+
+# if you chose this when installing conda, otherwise skip it!
+zsh
+# if not, the prompt starts with (sdco)
+conda activate sdco 
+
+python ./webui.py --no-half
 
 ```
 
