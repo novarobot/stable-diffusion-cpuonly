@@ -34,74 +34,60 @@ git clone https://github.com/novarobot/stable-diffusion-cpuonly.git
  
 ```
 
-### install conda (optional but highly recommended)
+### install conda
 Don't put it on both bash and zsh, just do one installation!!!
 
 
+(OPTION ZSH) install conda under zsh (optional)
+
 ```
-install conda under zsh (optional)
-
 sudo apt install zsh
-
 copy the default zshrc file (optional)
-
 cp ./stable-diffusion-cpuonly/.zshrc /home/USERNAME
-
 zsh
 ```
 
 (if you haven't copied the zshrc, create the appropriate one with the menu that appears. If you copied it, the menu will not appear)
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-
 chmod 777 Miniconda3-latest-Linux-x86_64.sh
 
-The installation location is e.g.: /opt/StableDiffusion/Miniconda3
+#The installation location is e.g.: /opt/StableDiffusion/Miniconda3
 
-Don't run conda init! (just hit enter)
+#Don't run conda init! (just hit enter)
 
 ./Miniconda3/bin/conda init zsh
-
 exit
 
 #Back to zsh again
 
 zsh
+#A prefix (base) had to appear before the prompt!
+conda env create -f ./stable-diffusion-cpuonly/environment-cpuonly.yaml
+conda activate sdco
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+#A prefix (sdco) had to appear before the prompt!
+```
+
+(OPTION BASH) install conda under bash (original solution)
+```
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod 777 Miniconda3-latest-Linux-x86_64.sh
+
+#The installation location is e.g.: /opt/StableDiffusion/Miniconda3
+
+#Run conda init (yes)
+
+#Exit and return to the terminal
 
 #A prefix (base) had to appear before the prompt!
 
 conda env create -f ./stable-diffusion-cpuonly/environment-cpuonly.yaml
-
 conda activate sdco
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
 
 #A prefix (sdco) had to appear before the prompt!
 ```
-
-##install conda under bash (original solution)
-```
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-
-chmod 777 Miniconda3-latest-Linux-x86_64.sh
-
-The installation location is e.g.: /opt/StableDiffusion/Miniconda3
-
-Run conda init (yes)
-
-Exit and return to the terminal
-
-A prefix (base) had to appear before the prompt!
-
-conda env create -f ./stable-diffusion-cpuonly/environment-cpuonly.yaml
-
-conda activate sdco
-
-A prefix (sdco) had to appear before the prompt!
-```
-
-
-### Download Stable-Diffusion-cpuonly
-
-Copy this github repository and extract the files.
 
 ### Download the CompVis Stable-diffusion model.
 
@@ -111,6 +97,7 @@ https://huggingface.co/CompVis/stable-diffusion-v-1-4-original
 
 
 ```
+cd stable-diffusion-cpuonly
 wget https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt
 mv sd-v1-4.ckpt models/ldm/stable-diffusion-v1/model.ckpt 
 ```
@@ -124,8 +111,6 @@ https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth
 wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth
 mv GFPGANv1.3.pth src/gfpgan/experiments/pretrained_models/GFPGANv1.3.pth
 ```
-
-
 
 ### Linux - Running the install script
 open a terminal or powershell and cd to your stable-diffusion-cpuonly-main directory and run
