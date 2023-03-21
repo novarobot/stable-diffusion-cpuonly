@@ -65,7 +65,6 @@ zsh
 #A prefix (base) had to appear before the prompt!
 conda env create -f ./stable-diffusion-cpuonly/environment-cpuonly.yaml
 conda activate sdco
-conda install pytorch torchvision torchaudio cpuonly -c pytorch
 #A prefix (sdco) had to appear before the prompt!
 ```
 
