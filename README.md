@@ -22,7 +22,7 @@ sudo apt-get -y install git wget build-essential
 ```
 ## Installation of Stable-Diffusion-cpuonly
 
-### Create a working folder and download githun
+### Create a working folder and download github
 ```
 sudo mkdir /opt/StableDiffusion
 
