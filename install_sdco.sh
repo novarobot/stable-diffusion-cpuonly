@@ -24,6 +24,7 @@ pip install chardet
 pip install --force-reinstall charset-normalizer==3.1.0
 pip install git+https://github.com/crowsonkb/k-diffusion/
 pip install pytorch-lightning
+conda install pytorch-lightning -c conda-forge
 
 #cp sd-v1-4.ckpt models/ldm/stable-diffusion-v1/model.ckpt
 #rm sd-v1-4.ckpt
