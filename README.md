@@ -1,3 +1,9 @@
+FORK from https://github.com/darkhemic/stable-diffusion-cpuonly
+
+Debian 10 and Debian 11 work !
+
+Windows NOT TESTED, visit original repo !
+
 # Stable Diffusion CPU only
 
 This fork of Stable-Diffusion doesn't require a high end graphics card and runs exclusively on your cpu. It's been tested on Linux Mint 22.04 and Windows 10.
@@ -11,21 +17,7 @@ A install guide video is located here. https://www.youtube.com/watch?v=mTrA4uDiK
   
 ## Requirements
 
-### Windows and Linux requirements
-
-Install Anaconda
-https://www.anaconda.com/
-Yes even on a linux system anaconda needs to be installed. 
-
-### Windows 
-
-##### Install Visual Studio Community Edition to build 1 file. 
-Click on the free download and make sure to check "Desktop Development with C++" when installing as per this image
-(https://learn.microsoft.com/en-us/cpp/get-started/media/vs2022-installer-workloads.png?view=msvc-170)
-
-
-https://visualstudio.microsoft.com/downloads/?q=build+tools
-
+Miniconda : https://docs.conda.io/en/latest/miniconda.html
 
 
 ##### Install Git
@@ -40,10 +32,6 @@ Windows users need this verison
 https://eternallybored.org/misc/wget/
 download the .exe and I copied it to my C:/Windows/System directory (this isn't the correct way just the fastest to get it working)
 
-
-reboot your system just to make sure everything is properly loaded up.
-
-### Linux Mint 22.04
 
 Install git and wget with the following command
 ```
@@ -69,32 +57,23 @@ https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth
 
 copy the file to your stable-diffusion-cpuponly-main directory
 
-### Windows - Running the install script
 
-open a terminal or powershell and cd to your stable-diffusion-cpuonly-main directory and run
-```
-.\install_sdco.bat
-```
+create manual conda enviroment and activate ! (optional, but strongly recommended)
+
 
 ### Linux - Running the install script
 open a terminal or powershell and cd to your stable-diffusion-cpuonly-main directory and run
 ```
-bash -i install_sdco.sh
-```
-
-## Windows - Starting Stable-Diffusion-cpuonly
-
-Run the following command
-
-```
-.\run_sdco.bat
+install_sdco.sh
 ```
 ## Linux - Starting Stable-Diffusion-cpuonly
 
 Run the following command
 
-```
-bash -i run_sdco.sh
+activate manual conda enviroment ! (optional, but strongly recommended)
+
+run_sdco.sh
+
 ```
 
 
