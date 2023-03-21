@@ -112,15 +112,15 @@ mv GFPGANv1.3.pth ./stable-diffusion-cpuonly/src/gfpgan/experiments/pretrained_m
 ```
 
 ### Linux - Running the install script
-open a terminal or powershell and cd to your stable-diffusion-cpuonly-main directory and run
 ```
-install_sdco.sh
+cd stable-diffusion-cpuonly/
+./install_sdco.sh
 ```
 ## Linux - Starting Stable-Diffusion-cpuonly
 
 Run the following command
 
-run_sdco.sh
+./run_sdco.sh
 
 ```
 
