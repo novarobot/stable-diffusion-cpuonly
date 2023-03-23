@@ -97,6 +97,7 @@ https://huggingface.co/CompVis/stable-diffusion-v-1-4-original
 
 ```
 wget https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt
+mkdir -p ./stable-diffusion-cpuonly/models/ldm/stable-diffusion-v1/ 
 mv sd-v1-4.ckpt ./stable-diffusion-cpuonly/models/ldm/stable-diffusion-v1/model.ckpt 
 ```
 
@@ -107,6 +108,7 @@ https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth
 
 ```
 wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth
+mkdir -p ./stable-diffusion-cpuonly/src/gfpgan/experiments/pretrained_models/
 mv GFPGANv1.3.pth ./stable-diffusion-cpuonly/src/gfpgan/experiments/pretrained_models/GFPGANv1.3.pth
 ```
 
@@ -128,7 +130,7 @@ zsh
 # if not, the prompt starts with (sdco)
 conda activate sdco 
 
-python ./webui.py --no-half
+GRADIO_SERVER_NAME=0.0.0.0 && python ./webui.py --no-half
 
 ```
 
